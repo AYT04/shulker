@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShulkerOS | A Linux Distro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        :root {
+            --canada-red: #EF4444;
+            --deep-midnight: #0F172A;
+            /* Softened text colors */
+            --text-primary: #E2E8F0; /* Slate 200 */
+            --text-muted: #94A3B8;   /* Slate 400 */
+            --text-heading: #F1F5F9; /* Slate 100 */
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--deep-midnight);
+            color: var(--text-primary);
+            scroll-behavior: smooth;
+        }
+
+        .glass {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, rgba(239, 68, 68, 0.1), transparent),
+                        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.1), transparent);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            border-color: var(--canada-red);
+        }
+
+        .podcast-disclaimer {
+            border-left: 4px solid var(--canada-red);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fade {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+
+        h1, h2, h3 {
+            color: var(--text-heading);
+        }
+
+        p {
+            color: var(--text-muted);
+        }
+
+        .hero-title {
+            background: linear-gradient(to bottom right, #F1F5F9, #94A3B8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="hero-gradient">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-leaf text-red-500 text-2xl"></i>
+                <span class="text-xl font-bold tracking-tight">ShulkerOS</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#features" class="hover:text-red-400 transition">Features</a>
+                <a href="#contribute" class="hover:text-red-400 transition">Contribute</a>
+                <a href="#contact" class="hover:text-red-400 transition">Contact</a>
+            </div>
+            <a href="https://github.com/AYT04/shulker/releases/tag/ALPHA" target="_blank" class="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-full text-sm font-bold transition">Download ISO</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-6">
+        <div class="max-w-5xl mx-auto text-center animate-fade">
+            <div class="inline-flex items-center space-x-2 bg-slate-800/50 border border-slate-700 px-4 py-1.5 rounded-full mb-6">
+                <span class="flex h-2 w-2 rounded-full bg-red-500"></span>
+                <span class="text-xs font-semibold uppercase tracking-widest text-slate-300">Proudly Made in Canada 🇨🇦</span>
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
+                Performance as vast as the North.
+            </h1>
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
+                A modern, user-centric Linux distribution designed for stability, security, and a touch of Canadian hospitality.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-slate-200 transition">Get Started</button>
+                <button class="glass px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition">View Source Code</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">Engineered for Excellence</h2>
+                <div class="h-1 w-20 bg-red-500 mx-auto"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-bolt text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Blazing Fast</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Optimized kernel and lightweight environment ensure you spend more time working and less time waiting.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-halved text-blue-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Secure by Design</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Hardened configurations and rapid security updates keeping your data as safe as a locked cabin.</p>
+                </div>
+                <div class="glass p-8 rounded-2xl feature-card">
+                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-cube text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Roll-Release Ready</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">The latest packages without the bloat, curated specifically for stability and long-term use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contribution Section -->
+    <section id="contribute" class="py-20 px-6 bg-slate-900/40">
+        <div class="max-w-4xl mx-auto glass p-10 rounded-3xl text-center">
+            <h2 class="text-3xl font-bold mb-4">Join the Tribe</h2>
+            <p class="text-slate-400 mb-8">ShulkerOS is a community effort. Whether you're a developer, designer, or documentation pro, your help makes us better.</p>
+            <div class="flex justify-center space-x-6">
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-red-500">1+</p>
+                    <p class="text-xs uppercase tracking-widest text-slate-500">Contributors</p>
+                </div>
+                <div class="w-px h-10 bg-slate-700"></div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-red-500">8</p>
+                    <p class="text-xs uppercase tracking-widest text-slate-500">Commits</p>
+                </div>
+            </div>
+            <button class="mt-8 bg-red-600 hover:bg-red-700 px-8 py-3 rounded-full font-bold transition">Contribute on GitHub</button>
+        </div>
+    </section>
+
+    <!-- Podcast / Domain Disclaimer (Special Request) -->
+    <section class="py-20 px-6">
+        <div class="max-w-3xl mx-auto podcast-disclaimer glass p-8 bg-slate-800/30">
+            <h4 class="text-red-400 font-bold uppercase tracking-widest text-xs mb-3">A Note on this Domain</h4>
+            <p class="text-slate-300 italic">
+                "Just a quick heads up: Despite our domain name, ShulkerOS is an independent project and is <strong>not affiliated</strong> with any specific entity or podcast. I actually secured this domain because I've been a massive fan of <a href="https://www.ohthatremindsme.com/">the podcast</a> since episode one. While the OS and the podcast are totally different worlds, I love promoting great content while building great software!"
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6">
+        <div class="max-w-xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-2">Get in Touch</h2>
+                <p class="text-slate-400">Feedback, bugs, or just to say hi.</p>
+            </div>
+            <form id="contactForm" class="space-y-4">
+                <input type="text" placeholder="Name" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-4 focus:outline-none focus:border-red-500 transition">
+                <input type="email" placeholder="Email" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-4 focus:outline-none focus:border-red-500 transition">
+                <textarea rows="4" placeholder="Message" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-4 focus:outline-none focus:border-red-500 transition"></textarea>
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 py-4 rounded-xl font-bold transition">Send Message</button>
+            </form>
+            <div id="formResponse" class="hidden mt-4 p-4 rounded-xl bg-green-500/10 text-green-400 border border-green-500/20 text-center">
+                Thanks! Message sent successfully.
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 border-t border-slate-800 px-6">
+        <div class="max-w-7xl mx-auto flex flex-col md:row justify-between items-center opacity-60 text-sm">
+            <p>&copy; 2024 ShulkerOS Project. Made with ❤️ in Canada.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="https://github.com/AYT04/Shulker"><i class="fab fa-github"></i></a>
+                <a href="https://discord.gg/b453TaBBK6"><i class="fab fa-discord"></i></a>
+                <a href="https://x.com/AddisonYT04"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple form handling logic
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('hidden');
+            document.getElementById('formResponse').classList.remove('hidden');
+        });
+
+        // Scroll Reveal Animation Observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
