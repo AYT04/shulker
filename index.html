@@ -1,231 +1,210 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShulkerOS | A Linux Distro</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        
-        :root {
-            --canada-red: #EF4444;
-            --deep-midnight: #0F172A;
-            /* Softened text colors */
-            --text-primary: #E2E8F0; /* Slate 200 */
-            --text-muted: #94A3B8;   /* Slate 400 */
-            --text-heading: #F1F5F9; /* Slate 100 */
-        }
-
+    <title>Oh That Reminds Me Fan Mod</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <style type="text/css">
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--deep-midnight);
-            color: var(--text-primary);
-            scroll-behavior: smooth;
+            background-color: #c0c0c0; /* Classic Windows/Browser Grey */
+            color: #000000;
+            font-family: "Times New Roman", Times, serif;
+            margin: 20px;
+        }
+        a:link { color: #0000FF; }
+        a:visited { color: #800080; }
+        a:active { color: #FF0000; }
+
+        .header-table {
+            width: 100%;
+            background-color: #000080; /* Navy blue header */
+            color: #ffffff;
+            padding: 10px;
+            border: 2px outset #ffffff;
         }
 
-        .glass {
-            background: rgba(30, 41, 59, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+        .main-container {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
         }
 
-        .hero-gradient {
-            background: radial-gradient(circle at top right, rgba(239, 68, 68, 0.1), transparent),
-                        radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.1), transparent);
+        .sidebar {
+            width: 150px;
+            vertical-align: top;
+            background-color: #d0d0d0;
+            border: 2px inset #ffffff;
+            padding: 10px;
         }
 
-        .feature-card:hover {
-            transform: translateY(-5px);
-            transition: all 0.3s ease;
-            border-color: var(--canada-red);
+        .content {
+            vertical-align: top;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 2px inset #ffffff;
         }
 
-        .podcast-disclaimer {
-            border-left: 4px solid var(--canada-red);
+        .news-box {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #ffffcc; /* Legal pad yellow */
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .feature-list {
+            list-style-type: square;
         }
 
-        .animate-fade {
-            animation: fadeIn 0.8s ease-out forwards;
+        .download-btn {
+            background-color: #008000;
+            color: white;
+            padding: 5px 10px;
+            text-decoration: none;
+            border: 2px outset #ffffff;
+            font-weight: bold;
         }
 
-        h1, h2, h3 {
-            color: var(--text-heading);
+        .hit-counter {
+            background-color: #000;
+            color: #0f0;
+            padding: 2px 5px;
+            font-family: "Courier New", monospace;
+            border: 1px solid #888;
         }
 
-        p {
-            color: var(--text-muted);
-        }
-
-        .hero-title {
-            background: linear-gradient(to bottom right, #F1F5F9, #94A3B8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        marquee {
+            background-color: #eee;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
         }
     </style>
 </head>
-<body class="hero-gradient">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 glass">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <i class="fas fa-leaf text-red-500 text-2xl"></i>
-                <span class="text-xl font-bold tracking-tight">ShulkerOS</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#features" class="hover:text-red-400 transition">Features</a>
-                <a href="#contribute" class="hover:text-red-400 transition">Contribute</a>
-                <a href="#contact" class="hover:text-red-400 transition">Contact</a>
-            </div>
-            <a href="https://github.com/AYT04/shulker/releases/tag/ALPHA" target="_blank" class="bg-red-600 hover:bg-red-700 px-5 py-2 rounded-full text-sm font-bold transition">Download ISO</a>
-        </div>
-    </nav>
+<table class="header-table">
+    <tr>
+        <td>
+            <h1 style="margin:0;">OTRMod</h1>
+            <i>A fan project for the "Oh That Reminds Me" Podcast community</i>
+        </td>
+        <td align="right">
+            <b>[ FAN SITE - NOT AFFILIATED WITH MADJAD_ OR SiiN ]</b>
+        </td>
+    </tr>
+</table>
 
-    <!-- Hero Section -->
-    <header class="pt-32 pb-20 px-6">
-        <div class="max-w-5xl mx-auto text-center animate-fade">
-            <div class="inline-flex items-center space-x-2 bg-slate-800/50 border border-slate-700 px-4 py-1.5 rounded-full mb-6">
-                <span class="flex h-2 w-2 rounded-full bg-red-500"></span>
-                <span class="text-xs font-semibold uppercase tracking-widest text-slate-300">Proudly Made in Canada 🇨🇦</span>
+<marquee scrollamount="3">CELEBRATING 3 YEARS OF POP CULTURE, MOVIES, AND GAMES WITH MCKENZIE & JOHN!</marquee>
+
+<table class="main-container">
+    <tr>
+        <!-- SIDEBAR NAVIGATION -->
+        <td class="sidebar">
+            <b>Navigation</b>
+            <hr>
+            <p><a href="#home">Home</a></p>
+            <p><a href="#about">The Origins</a></p>
+            <p><a href="#features">Mod Specs</a></p>
+            <p><a href="#install">Installation</a></p>
+            <p><a href="#download">Downloads</a></p>
+            <p><a href="https://www.ohthatremindsme.com/" target="_blank">Official Podcast</a></p>
+            <br>
+            <center>
+                <img src="https://web.archive.org/web/20090829141940/http://geocities.com/Athens/Acropolis/2691/animated_minecraft_grass_block.gif" alt="Block" border="0" onerror="this.style.display='none'">
+                <p>Best viewed in <br> <b>Netscape 4.0</b></p>
+                <img src="https://web.archive.org/web/20091027005011im_/http://geocities.com/Area51/Lair/2179/ie_logo.gif" width="31" height="31" alt="IE">
+            </center>
+        </td>
+
+        <!-- MAIN CONTENT AREA -->
+        <td class="content">
+            <div class="news-box">
+                <b>Update log: Jan 28, 2026</b><br>
+                Happy 3rd Anniversary to the show! As Mckenzie and
+                John talk 2026 goals on Ep 125, I've updated the mod to
+                include the "Stranger Things 5" event items and the new
+                "Marty Supreme" villager skins.
+                <br><i>- Webmaster EnderFan_99</i>
             </div>
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-400">
-                Performance as vast as the North.
-            </h1>
-            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto">
-                A modern, user-centric Linux distribution designed for stability, security, and a touch of Canadian hospitality.
+
+            <h2 id="home">Welcome to the Mirror Site</h2>
+            <p>
+                This is a fan-made repository for <b>Echoes of Ender</b>.
+                This mod is inspired by the weekly catch-ups of <b>Mckenzie
+                    (MadJad_)</b> and <b>John (SiiN)</b>. 
             </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <button class="bg-white text-slate-900 px-8 py-4 rounded-xl font-bold hover:bg-slate-200 transition">Get Started</button>
-                <button class="glass px-8 py-4 rounded-xl font-bold hover:bg-slate-800 transition">View Source Code</button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Features Section -->
-    <section id="features" class="py-20 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Engineered for Excellence</h2>
-                <div class="h-1 w-20 bg-red-500 mx-auto"></div>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="glass p-8 rounded-2xl feature-card">
-                    <div class="w-12 h-12 bg-red-500/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-bolt text-red-500 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Blazing Fast</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Optimized kernel and lightweight environment ensure you spend more time working and less time waiting.</p>
-                </div>
-                <div class="glass p-8 rounded-2xl feature-card">
-                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-shield-halved text-blue-500 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Secure by Design</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Hardened configurations and rapid security updates keeping your data as safe as a locked cabin.</p>
-                </div>
-                <div class="glass p-8 rounded-2xl feature-card">
-                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-cube text-green-500 text-xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Roll-Release Ready</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">The latest packages without the bloat, curated specifically for stability and long-term use.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contribution Section -->
-    <section id="contribute" class="py-20 px-6 bg-slate-900/40">
-        <div class="max-w-4xl mx-auto glass p-10 rounded-3xl text-center">
-            <h2 class="text-3xl font-bold mb-4">Join the Tribe</h2>
-            <p class="text-slate-400 mb-8">ShulkerOS is a community effort. Whether you're a developer, designer, or documentation pro, your help makes us better.</p>
-            <div class="flex justify-center space-x-6">
-                <div class="text-center">
-                    <p class="text-2xl font-bold text-red-500">1+</p>
-                    <p class="text-xs uppercase tracking-widest text-slate-500">Contributors</p>
-                </div>
-                <div class="w-px h-10 bg-slate-700"></div>
-                <div class="text-center">
-                    <p class="text-2xl font-bold text-red-500">8</p>
-                    <p class="text-xs uppercase tracking-widest text-slate-500">Commits</p>
-                </div>
-            </div>
-            <button class="mt-8 bg-red-600 hover:bg-red-700 px-8 py-3 rounded-full font-bold transition">Contribute on GitHub</button>
-        </div>
-    </section>
-
-    <!-- Podcast / Domain Disclaimer (Special Request) -->
-    <section class="py-20 px-6">
-        <div class="max-w-3xl mx-auto podcast-disclaimer glass p-8 bg-slate-800/30">
-            <h4 class="text-red-400 font-bold uppercase tracking-widest text-xs mb-3">A Note on this Domain</h4>
-            <p class="text-slate-300 italic">
-                "Just a quick heads up: Despite our domain name, ShulkerOS is an independent project and is <strong>not affiliated</strong> with any specific entity or podcast. I actually secured this domain because I've been a massive fan of <a href="https://www.ohthatremindsme.com/">the podcast</a> since episode one. While the OS and the podcast are totally different worlds, I love promoting great content while building great software!"
+            <p>
+                After hearing how the hosts met during a Minecraft Bedwars match back in
+                2019, I felt compelled to create a mod that brings their unique blend of pop
+                culture, gaming expertise, and "that reminds me" anecdotes into the world
+                of Minecraft.
             </p>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-6">
-        <div class="max-w-xl mx-auto">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl font-bold mb-2">Get in Touch</h2>
-                <p class="text-slate-400">Feedback, bugs, or just to say hi.</p>
-            </div>
-            <form id="contactForm" class="space-y-4">
-                <input type="text" placeholder="Name" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-4 focus:outline-none focus:border-red-500 transition">
-                <input type="email" placeholder="Email" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-4 focus:outline-none focus:border-red-500 transition">
-                <textarea rows="4" placeholder="Message" class="w-full bg-slate-800 border border-slate-700 rounded-xl p-4 focus:outline-none focus:border-red-500 transition"></textarea>
-                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 py-4 rounded-xl font-bold transition">Send Message</button>
-            </form>
-            <div id="formResponse" class="hidden mt-4 p-4 rounded-xl bg-green-500/10 text-green-400 border border-green-500/20 text-center">
-                Thanks! Message sent successfully.
-            </div>
-        </div>
-    </section>
+            <hr>
 
-    <!-- Footer -->
-    <footer class="py-10 border-t border-slate-800 px-6">
-        <div class="max-w-7xl mx-auto flex flex-col md:row justify-between items-center opacity-60 text-sm">
-            <p>&copy; 2024 ShulkerOS Project. Made with ❤️ in Canada.</p>
-            <div class="flex space-x-6 mt-4 md:mt-0">
-                <a href="https://github.com/AYT04/Shulker"><i class="fab fa-github"></i></a>
-                <a href="https://discord.gg/b453TaBBK6"><i class="fab fa-discord"></i></a>
-                <a href="https://x.com/AddisonYT04"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </footer>
+            <h2 id="about">The Origins</h2>
+            <p>
+                The <i>Oh That Reminds Me</i> podcast is about everything that makes us: movies, music, and the games we play. This mod tries to capture that spirit. Whether it's John's competitive edge from his Rainbow Six Siege days or Mckenzie's lifestyle and cosplay influence, there's a piece of the show in every line of code.
+            </p>
 
-    <script>
-        // Simple form handling logic
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            this.classList.add('hidden');
-            document.getElementById('formResponse').classList.remove('hidden');
-        });
+            <h2 id="features">Core Mechanics (v2.4.0)</h2>
+            <ul class="feature-list">
+                <li><b>Bedwars Legacy:</b> Enhanced bridge-building mechanics and defensive block buffs inspired by the 2019 match that started it all.</li>
+                <li><b>Siege Tactics:</b> A "Leaning" mechanic (Q/E keys) that allows players to peek around corners, a tribute to John's R6 Siege background.</li>
+                <li><b>Pop Culture Echoes:</b> Occasional world events themed after movies like <i>Wicked</i>, <i>Stranger Things</i>, and <i>FNAF 2</i>.</li>
+                <li><b>"The Tea" Scrolls:</b> Craftable items that reveal lore about the "Endless Vox" world in the style of Mckenzie's storytelling.</li>
+                <li><b>Streamer Awards Trophy:</b> A rare collectible that can be displayed in your base.</li>
+            </ul>
 
-        // Scroll Reveal Animation Observer
-        const observerOptions = {
-            threshold: 0.1
-        };
+            <hr>
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade');
-                }
-            });
-        }, observerOptions);
+            <h2 id="install">How to Install</h2>
+            <ol>
+                <li>Install <b>Forge</b> (1.16+).</li>
+                <li>Download the <b>JAR</b> file below.</li>
+                <li>Drop the file into your <code>mods</code> folder.</li>
+                <li>Launch and listen to the latest episode while you play!</li>
+            </ol>
 
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-    </script>
+            <hr>
+
+            <h2 id="download">Download Archive</h2>
+            <table border="1" cellpadding="5" width="100%" bgcolor="#f0f0f0">
+                <tr bgcolor="#d0d0d0">
+                    <th>Filename</th>
+                    <th>Size</th>
+                    <th>Type</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>echoes-v2.4.0-OTRM-edition.jar</td>
+                    <td>1.4 MB</td>
+                    <td>JAR File</td>
+                    <td><a href="#" class="download-btn">DOWNLOAD</a></td>
+                </tr>
+                <tr>
+                    <td>changelog.txt</td>
+                    <td>8 KB</td>
+                    <td>Text</td>
+                    <td><a href="#">View</a></td>
+                </tr>
+            </table>
+
+            <br>
+            <center>
+                <div class="hit-counter">You are visitor number: 0005421</div>
+            </center>
+        </td>
+    </tr>
+</table>
+
+<p align="center">
+    <hr width="80%">
+    <font size="2">
+        Minecraft is a trademark of Mojang Synergies AB. This site is a fan production for the <i>Oh That Reminds Me</i> community.<br>
+        [ <a href="mailto:admin@localhost">Email Webmaster</a> ] | [ <a href="#">Webring</a> ] | [ <a href="#">Top 100 Games</a> ]
+        <br><br>
+        <img src="https://web.archive.org/web/20090831190342im_/http://geocities.com/Athens/Acropolis/2691/construction.gif" alt="Under Construction">
+    </font>
+</p>
+
 </body>
 </html>
